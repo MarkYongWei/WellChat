@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context="com.wellcha.wellchat.controller.activity.LoginActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <EditText
+        android:id="@+id/et_Login_id"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/ease_alert_click_bg"
+        android:backgroundTint="@color/bottom_text_color_normal"
+        android:ems="10"
+        android:hint="账号"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/bt_Login_login"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ease_alert_click_bg"
+        android:backgroundTint="@color/btn_blue_normal"
+        android:text="登  陆"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Login_pwd"/>
+
+    <Button
+        android:id="@+id/bt_Login_regist"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ease_alert_click_bg"
+        android:backgroundTint="@color/btn_blue_normal"
+        android:text="新用户注册"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_Login_login"/>
+
+    <EditText
+        android:id="@+id/et_Login_pwd"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/ease_alert_click_bg"
+        android:backgroundTint="@color/bottom_text_color_normal"
+        android:ems="10"
+        android:hint="密码"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Login_id"/>
+
+</android.support.constraint.ConstraintLayout>

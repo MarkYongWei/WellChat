@@ -69,5 +69,7 @@ public class AddLinkmanActivity extends Activity {
         tv_add_name=findViewById(R.id.tv_add_name);
         bt_add_add=findViewById(R.id.bt_add_add);
         rl_add=findViewById(R.id.rl_add);
+        //a
+
     }
 }

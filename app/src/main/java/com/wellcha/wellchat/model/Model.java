@@ -2,6 +2,7 @@ package com.wellcha.wellchat.model;
 
 import android.content.Context;
 
+import com.wellcha.wellchat.model.bean.UserInfo;
 import com.wellcha.wellchat.model.dao.UserAccountDao;
 
 import java.util.concurrent.ExecutorService;
@@ -20,6 +21,7 @@ public class Model {
     private UserAccountDao userAccountDao;
     private ExecutorService executors= Executors.newCachedThreadPool();
     private static Model model=new Model();
+//    private DBManager dbManager;
     private Model(){
 
     }
@@ -38,7 +40,18 @@ public class Model {
         return executors;
     }
     //用户登陆成功后处理方法
-    public void loginSuccess() {
+    public void loginSuccess(UserInfo account) {
+//
+//        // 校验
+//        if(account == null) {
+//            return;
+//        }
+//
+//        if(dbManager != null) {
+//            dbManager.close();
+//        }
+//
+//        dbManager = new DBManager(mContext, account.getName());
     }
     //获取用户账号数据库操作类对象
     public UserAccountDao getUserAccountDao(){

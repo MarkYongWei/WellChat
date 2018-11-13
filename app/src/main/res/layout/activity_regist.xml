@@ -5,61 +5,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.wellcha.wellchat.controller.activity.RegistActivity"
-    tools:layout_editor_absoluteY="25dp"
-    tools:layout_editor_absoluteX="0dp">
+    android:background="@drawable/regist_background"
+    android:theme="@android:style/Theme.NoTitleBar"
+    tools:context="com.wellcha.wellchat.controller.activity.RegistActivity">
 
-    <TextView
-        android:id="@+id/et_Regist_id"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="242dp"
+        android:layout_height="107dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="160dp"
-        android:hint="账号"
-        android:textSize="18sp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/regist_logo1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
+    <EditText
+        android:id="@+id/et_Regist_id"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/bottom_text_color_normal"
+        android:ems="10"
+        android:hint="用户名"
+        android:inputType="text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+    <EditText
         android:id="@+id/et_Regist_pwd"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/bottom_text_color_normal"
+        android:ems="10"
         android:hint="密码"
-        android:textSize="18sp"
+        android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Regist_id"/>
 
-    <TextView
-        android:id="@+id/et_Regist_nick"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="16dp"
+    <EditText
+        android:id="@+id/et_Regist_repwd"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="24dp"
-        android:hint="昵称"
-        android:textSize="18sp"
-        app:layout_constraintHorizontal_bias="0.485"
+        android:background="@color/bottom_text_color_normal"
+        android:ems="10"
+        android:hint="确认密码"
+        android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Regist_pwd"/>
 
     <Button
         android:id="@+id/bt_Regist_input"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/btn_blue_pressed"
+        android:layout_marginTop="30dp"
+        android:alpha="0.6"
+        android:background="@color/btn_green_pressed"
         android:text="注   册"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_Regist_nick"/>
+        app:layout_constraintTop_toBottomOf="@+id/et_Regist_repwd"
+        tools:background="@color/btn_green_noraml"/>
+
 </android.support.constraint.ConstraintLayout>

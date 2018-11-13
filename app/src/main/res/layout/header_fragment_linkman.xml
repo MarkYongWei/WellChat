@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/invite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/em_new_friends_icon"
+            app:srcCompat="@drawable/em_new_friends_icon"/>
+
+        <TextView
+            android:id="@+id/textInvite"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="好友邀请"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/group"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/em_group_icon"
+            app:srcCompat="@drawable/em_group_icon"/>
+
+        <TextView
+            android:id="@+id/textGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="群组"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</LinearLayout>

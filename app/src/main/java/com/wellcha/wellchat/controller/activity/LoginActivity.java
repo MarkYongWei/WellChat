@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.exceptions.HyphenateException;
 import com.wellcha.wellchat.R;
 import com.wellcha.wellchat.model.Model;
 import com.wellcha.wellchat.model.bean.UserInfo;
@@ -37,7 +36,7 @@ public class LoginActivity extends Activity {
         bt_Login_regist.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                regist();
+                newRegist();
             }
         });
         //登陆按钮点击事件
@@ -98,37 +97,9 @@ public class LoginActivity extends Activity {
     }
 
     //注册业务逻辑
-    private void regist(){
-        final String registId = et_Login_id.getText().toString();
-        final String registPwd = et_Login_pwd.getText().toString();
-        if(TextUtils.isEmpty(registId)||TextUtils.isEmpty(registPwd)){
-            Toast.makeText(LoginActivity.this, "输入的用户名或密码不能为空", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        //去环信服务器注册账号
-        Model.getInstance().getGlobalThreadPool().execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    EMClient.getInstance().createAccount(registId,registPwd);
-                    //更新页面显示
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(LoginActivity.this,"注册成功", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                } catch (final HyphenateException e) {
-                    e.printStackTrace();
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(LoginActivity.this,"注册失败"+e.toString(), Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-            }
-        });
+    private void newRegist(){
+        Intent intent = new Intent(LoginActivity.this, RegistActivity.class);
+        startActivity(intent);
     }
     private void initView() {
         et_Login_id=findViewById(R.id.et_Login_id);

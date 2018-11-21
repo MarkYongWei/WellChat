@@ -80,6 +80,10 @@
         </activity>
         <activity android:name=".controller.activity.AddLinkmanActivity">
         </activity>
+        <activity android:name=".controller.activity.InviteActivity">
+        </activity>
+        <activity android:name=".controller.activity.ChatActivity">
+        </activity>
     </application>
 
 </manifest>

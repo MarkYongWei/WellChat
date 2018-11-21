@@ -57,6 +57,7 @@ public class SplashActivity extends Activity {
                         Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                         startActivity(intent);
                     }
+                    Model.getInstance().loginSuccess(account);
                     //跳到主页面
                     Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(intent);

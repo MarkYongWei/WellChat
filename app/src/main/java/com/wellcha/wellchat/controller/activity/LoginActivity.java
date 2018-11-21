@@ -63,7 +63,7 @@ public class LoginActivity extends Activity {
                     //登陆成功后处理
                     @Override
                     public void onSuccess() {
-//                        Model.getInstance().loginSuccess();
+                        Model.getInstance().loginSuccess(new UserInfo(loginId));
 
                         Model.getInstance().getUserAccountDao().addAccount(new UserInfo(loginId));
                         runOnUiThread(new Runnable() {

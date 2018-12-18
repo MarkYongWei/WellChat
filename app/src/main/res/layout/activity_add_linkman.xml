@@ -64,6 +64,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:src="@drawable/em_default_avatar"
             app:srcCompat="@drawable/em_default_avatar"/>
 
         <TextView
@@ -85,7 +86,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
-            android:text="查找"
+            android:text="添加"
             android:textSize="20sp"/>
 
     </RelativeLayout>

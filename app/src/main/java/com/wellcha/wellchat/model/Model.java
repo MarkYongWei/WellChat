@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.wellcha.wellchat.model.bean.UserInfo;
 import com.wellcha.wellchat.model.dao.UserAccountDao;
+import com.wellcha.wellchat.model.db.DBManager;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -21,7 +22,8 @@ public class Model {
     private UserAccountDao userAccountDao;
     private ExecutorService executors= Executors.newCachedThreadPool();
     private static Model model=new Model();
-//    private DBManager dbManager;
+
+    private DBManager dbManager;
     private Model(){
 
     }
@@ -34,6 +36,8 @@ public class Model {
         mContext=context;
 
          userAccountDao=new UserAccountDao(mContext);
+        // 开启全局监听
+        EventListener eventListener = new EventListener(mContext);
     }
     //获取全局线程池对象
     public ExecutorService getGlobalThreadPool(){
@@ -41,20 +45,23 @@ public class Model {
     }
     //用户登陆成功后处理方法
     public void loginSuccess(UserInfo account) {
-//
-//        // 校验
-//        if(account == null) {
-//            return;
-//        }
-//
-//        if(dbManager != null) {
-//            dbManager.close();
-//        }
-//
-//        dbManager = new DBManager(mContext, account.getName());
+
+        // 校验
+        if(account == null) {
+            return;
+        }
+
+        if(dbManager != null) {
+            dbManager.close();
+        }
+
+        dbManager = new DBManager(mContext, account.getName());
     }
     //获取用户账号数据库操作类对象
     public UserAccountDao getUserAccountDao(){
         return userAccountDao;
+    }
+    public DBManager getDbManager(){
+        return dbManager;
     }
 }

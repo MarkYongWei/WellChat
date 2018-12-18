@@ -86,7 +86,7 @@ public class LoginActivity extends Activity {
                             }
                         });
                     }
-//                    登陆过程中处理
+//                    登陆过程中处理。
                     @Override
                     public void onProgress(int i, String s) {
 
